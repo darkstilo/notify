@@ -1,0 +1,177 @@
+::-webkit-scrollbar { background: transparent; width: 0; }
+			::selection { background: transparent; color: #fff; }
+			::-moz-selection { background: transparent; color: #fff; }
+
+			* {
+				color: white;
+				font-family: sans-serif;
+				-webkit-user-select: none;
+			}
+
+			.notifications {
+				top: 160px;
+				right: 30px;
+				max-height: 63.5vh;
+				overflow: hidden;
+				max-width: 280px;
+				position: absolute;
+			}
+
+            .hideDiv{
+                display: none !important;
+            }
+
+            .showDiv{
+                display: block !important;
+            }
+
+
+
+			.notification {
+				display: flex;
+				padding: 10px;
+				margin-top: 10px;
+				border-radius: 4px;
+				box-sizing: border-box;
+				background: #123e71d3;
+				border-right: #1F7EA9 5px solid;
+				justify-content: space-between;
+				font-family: Arial,Helvetica,sans-serif;
+                min-width: 280px;
+                max-height: 130px;
+                
+				right: 30px;
+				position: absolute;
+
+			}
+
+			.notify-title {
+				display: flex;
+				font-size: 12px;
+				font-weight: 700;
+				margin-bottom: 3px;
+			}
+
+			.notify-ttext {
+				padding: 2.5px 0 0 0;
+			}
+
+			.notify-code {
+				background-color: #CC0000;
+				padding: 2px 5px;
+				margin-right: 5px;
+				border-radius: 5px;
+			}
+
+			.notify-body {
+				display: flex;
+				flex-flow: column;
+				font-size: 13px;
+				padding-left: 3px;
+				line-height: 20px;
+			}
+
+			.notify-body span {
+				margin-top: 3px;
+			}
+
+			.notify-body span span {
+				margin-left: 3px;
+			}
+
+			.notify-button {
+				height: 16px;
+			}
+
+			.notify-button svg {
+				cursor: pointer;
+			}
+
+            .colorStatusPassed{
+                background-color: rgb(10, 233, 84) !important;
+            }
+            .colorStatusNegative{
+                background-color: #CC0000 !important;
+            }
+
+            .hidden{
+                visibility: hidden;
+            }
+            .alert-box{
+                position: absolute;
+                right:0;
+                padding:15px 40px 15px 15px;
+                z-index:10;
+            }
+            .alert-box .close-alert{
+                font-size:20px;
+                position: absolute;
+                right:10px;
+                top:15px;
+                cursor: pointer;
+                z-index: 11;
+            }
+            .alert-box.show::before{
+                content: '';
+                position: absolute;
+                left:0;
+                bottom:0;
+                height: 4px;
+                background-color:#0ed40e;
+                width: 100%;
+                box-sizing: border-box;
+                z-index: 11;
+                animation: hideMeter 6s linear;
+            }
+            @keyframes hideMeter {
+                0%{
+                    width: 100%;
+                }
+                100%{
+                    width: 0%;
+                }
+            }
+            .alert-box.show{
+                animation: showAlert 1s ease forwards;
+            }
+            @keyframes showAlert{
+                0%{
+                    transform: translateX(100%);
+                }
+                40%{
+                    transform: translateX(-15%);
+                }
+                80%{
+                   transform: translateX(0%);	
+                }
+                100%{
+                   transform: translateX(-10px);		
+                }
+            }
+            
+            .alert-box.hide{
+                animation: hideAlert 1s ease forwards;
+            }
+            @keyframes hideAlert{
+                0%{
+                    transform: translateX(-10px);		
+                }
+                40%{
+                    transform: translateX(0%);	
+                }
+                80%{
+                    transform: translateX(-15%);
+                }
+                100%{
+                   transform: translateX(100%);		
+                }
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            

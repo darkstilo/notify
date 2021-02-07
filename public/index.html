@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    <div id="myDiv" class="hideDiv">
+        <div class="notification alert-box hide hidden">
+            <div class="notify-info" style="width: 230px;">
+                <div class="notify-button" style="float: right !important;"><i class="fas fa-map-marker-alt fa-lg"></i></div>
+                <div class="notify-title">
+                    <div class="notify-code colorStatusPassed">
+                        Confirmada
+                    </div>
+                    <div class="notify-ttext">Nova Entrega</div>
+                </div>
+                <div class="notify-body">
+                    <span><i class="fas fa-compass"></i><span>Motorista: <b id="motorista"></b></span></span>
+                    <span><i class="fas fa-id-badge"></i><span> De <b id="origem"></b> para <b id="destino"></b></span></span>
+                    <span><i class="fas fa-globe-europe"></i><span>Distância: <b id="distancia"></b></span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/main.js"></script>
+
+    <script>
+        const myBtn=document.querySelector(".my-btn");
+        const alertBox=document.querySelector(".alert-box");
+        const closeBtn=document.querySelector(".close-alert")     
+        let timer;
+        
+        showAlertBox();
+     
+        function showAlertBox(){
+           alertBox.classList.remove("hide");
+           alertBox.classList.add("show");
+           // hide animation onload 
+           if(alertBox.classList.contains("hidden")){
+               alertBox.classList.remove("hidden");
+           }
+        }
+         
+    </script>
+
+</body>
+</html>
